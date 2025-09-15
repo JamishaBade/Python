@@ -1,5 +1,5 @@
 class Car:
-    def __init__(self, price, brand, color):
+    def __init__(self, price, brand, color): # this is a constructor
         self.price = price
         self.brand = brand
         self.color = color

@@ -29,7 +29,7 @@ greetings("Sambhav")
 greetings("Shreya")
 city("NYC", "United States")
 
-
+# defualt parameter
 def greet(name="Friend"):
     print(f"Hello, {name}!")
 

@@ -18,4 +18,3 @@
 
 - **Flask Benefits:** Lightweight, easy to learn, flexible, minimal boilerplate code, allows building web apps quickly, extensible with plugins for databases, authentication, and more
 
-## Introduction

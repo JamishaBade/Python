@@ -13,7 +13,6 @@ def about():
     return "this is about us page"
 
 
-@app.route("/connect")
 def connect():
     return "this is contact us page"
 
