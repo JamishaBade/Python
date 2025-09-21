@@ -2,32 +2,32 @@
 <html lang="en">
 
 <head>
-  <title>Students</title>
+  <meta charset="UTF-8">
+  <title>Student Profile</title>
 </head>
 
 <body>
-  <h1>Student Profiles</h1>
+  {% if student %}
+  <h1>{{ student.name }}'s Profile</h1>
+  <p>Has good grades? {{ "Yes" if student.hasGoodGrade else "No" }}</p>
 
+  <h3>Subjects:</h3>
   <ul>
-    {% for student in students %}
-    <li>
-      <h2>{{ student.name }}</h2>
-
-      {% if student.hasGoodGrade %}
-      <p>You are a top student</p>
-      {% else %}
-      <p>You need to work harder</p>
-      {% endif %}
-
-      <h3>Subjects:</h3>
-      <ul>
-        {% for subject in student.subjects %}
-        <li>{{ subject }}</li>
-        {% endfor %}
-      </ul>
-    </li>
+    {% for subject in student.subjects %}
+    <li>{{ subject }}</li>
     {% endfor %}
   </ul>
+
+  {% elif students %}
+  <h1>All Students</h1>
+  <ul>
+    {% for s in students %}
+    <li>{{ s.name }} - {{ "Top Student" if s.hasGoodGrade else "Needs Work" }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <a href="{{ url_for('base') }}">Back to Dashboard</a>
 </body>
 
 </html>

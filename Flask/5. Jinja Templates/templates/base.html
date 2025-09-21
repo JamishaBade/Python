@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Student Dashboard</title>
+</head>
+
+<body>
+  <header>
+    <h1>Student Dashboard</h1>
+    <nav>
+      <a href="{{ url_for('login') }}">Login</a> 
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    {% block content %}
+    <!-- Default content: show student cards -->
+    <h2>Student Profiles</h2>
+    <p>Please Log in to view your profile. Enter a valid username and password</p>
+    
+    {% endblock %}
+  </main>
+</body>
+
+</html>
