@@ -1,6 +1,4 @@
-Great question! Let me break it down simply:
 
----
 
 ### **What is Jinja?**
 

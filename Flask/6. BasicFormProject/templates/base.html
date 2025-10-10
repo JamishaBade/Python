@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{% block title %} My feedback Site {% endblock %}</title>
+<style>
+  /* General body styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    /* dark background, softer than pure black */
+    color: #333;
+  }
+
+  /* Header and footer */
+  header,
+  footer {
+    background-color: #1f1f1f;
+    /* slightly lighter dark */
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* Navigation links */
+  nav {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #4CAF50;
+    /* subtle hover color */
+  }
+
+  /* Main content area */
+  main {
+    background-color: #fff;
+    color: #333;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Form styles */
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  form button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+</head>
+
+<body>
+  <header>
+    We Hear You!
+  </header>
+  <nav>
+    <a href="/feedback">Feedback</a>
+  </nav>
+
+  <main>
+    {% block content %} {% endblock %}
+  </main>
+  <footer>
+    <p>
+      &copy2025
+    </p>
+  </footer>
+</body>
+
+</html>
